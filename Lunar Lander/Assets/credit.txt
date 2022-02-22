@@ -1,0 +1,12 @@
+Credits:
+Game Font: Pixeled - OmegaPC777 - https://www.dafont.com/pixeled.font
+
+Credit Required In Game: "Sound from Zapsplat.com"
+Select Sound: https://www.zapsplat.com/music/game-tone-sci-fi-button-select-or-menu-sound-1/
+explosion: https://www.zapsplat.com/music/8bit-medium-explosion-bomb-boom-or-blast-cannon-retro-old-school-classic-cartoon/
+thrust: https://www.zapsplat.com/music/loop-rockets-of-a-space-shuttle-on-full-power/
+laser: https://www.zapsplat.com/music/game-laser-weapon-shoot-3/
+success: https://www.zapsplat.com/music/game-sound-retro-synth-fat-warm-success-positive-tone-1/
+fail: https://www.zapsplat.com/music/retro-game-tone-digital-synth-fifths-negative-fail-lose-2/
+asteroid boom: https://www.zapsplat.com/music/8bit-explosion-bomb-boom-or-blast-cannon-retro-old-school-classic-cartoon/
+asteroid fly: https://www.zapsplat.com/music/comet-asteroid-space-rock-or-small-planet-pass-by/

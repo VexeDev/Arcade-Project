@@ -1,0 +1,275 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UniTouchBar</name>
+    </assembly>
+    <members>
+        <member name="T:Uni.TouchBar">
+            <summary>
+            UniTouchBar Main Class.
+            </summary>
+        </member>
+        <member name="P:Uni.TouchBar.isUnity2018">
+            <summary>
+            Ahhh that 2018 allways make trouble...
+            </summary>
+            <value><c>true</c> if version is 2018; otherwise, <c>true</c>.</value>
+        </member>
+        <member name="P:Uni.TouchBar.showDebug">
+            <summary>
+            Do we display Debug?
+            </summary>
+            <value><c>true</c> if show debug; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="T:Uni.TouchBar.Manager">
+            <summary>
+            Plugin's Manager - used for managing all tasks in communication between plugin and lib.
+            Eq. WindowChanged, TouchBarReady etc.
+            </summary>
+        </member>
+        <member name="T:Uni.TouchBar.Manager.UnityWindowChanged">
+            <summary>
+            Event when window focus changed.
+            </summary>
+        </member>
+        <member name="E:Uni.TouchBar.Manager.OnUnityWindowChanged">
+            <summary>
+            Event when window focus changed.
+            </summary>
+        </member>
+        <member name="T:Uni.TouchBar.Manager.UnityPlaymodeChanged">
+            <summary>
+            Called when playmode changed.
+            </summary>
+        </member>
+        <member name="E:Uni.TouchBar.Manager.OnUnityPlaymodeChanged">
+            <summary>
+            Event when playmode changed.
+            </summary>
+        </member>
+        <member name="T:Uni.TouchBar.Manager.Ready">
+            <summary>
+            Event  when TouchBar is ready for buttons.
+            </summary>
+        </member>
+        <member name="E:Uni.TouchBar.Manager.OnReady">
+            <summary>
+            Event  when TouchBar is ready for buttons.
+            </summary>
+        </member>
+        <member name="M:Uni.TouchBar.Hide">
+            <summary>
+            Hides the TouchBar.
+            </summary>
+        </member>
+        <member name="M:Uni.TouchBar.Show">
+            <summary>
+            Shows the TouchBar.
+            </summary>
+        </member>
+        <member name="M:Uni.TouchBar.HideElement(System.String,System.String,System.Int32)">
+            <summary>
+            Hides the UniItem by identiefer. - might be helpful.
+            </summary>
+            <param name="groupIdentify">Group identify.</param>
+            <param name="identify">Identify.</param>
+            <param name="show">Show.</param>
+        </member>
+        <member name="F:Uni.TouchBar.showing">
+            <summary>
+            Is the TouchBar showing?
+            </summary>
+        </member>
+        <member name="F:Uni.TouchBar.showed">
+            <summary>
+            Has been the TouchBar ever showed?
+            </summary>
+        </member>
+        <member name="F:Uni.TouchBar.groups">
+            <summary>
+            List of Groups with elements.
+            </summary>
+        </member>
+        <member name="T:Uni.TouchBar.Windows">
+            <summary>
+            UnityEditor WindowsNames ( you can define a new one by overloading windows[]
+            </summary>
+        </member>
+        <member name="F:Uni.TouchBar.windows">
+            <summary>
+            UnityEditor WindowsNames ( you can define a new one by overloading )
+            </summary>
+            
+            
+        </member>
+        <member name="F:Uni.TouchBar._ready">
+            <summary>
+            Has plugin been ready??
+            </summary>
+        </member>
+        <member name="M:Uni.TouchBar.Init">
+            <summary>
+            Init plugin!
+            </summary>
+        </member>
+        <member name="M:Uni.TouchBar.ReloadGroup(Uni.TouchBar.Group)">
+            <summary>
+            Reloads the group. (if we for example add item)
+            </summary>
+            <param name="group">Group.</param>
+        </member>
+        <member name="M:Uni.TouchBar.AddGroup(Uni.TouchBar.Group)">
+            <summary>
+            Adds the group.
+            </summary>
+            <param name="group">Group.</param>
+        </member>
+        <member name="T:Uni.TouchBar.Item">
+            <summary>
+            TouchBar Item( Button, Slider etc)
+            </summary>
+        </member>
+        <member name="F:Uni.TouchBar.Item._identifier">
+            <summary>
+            The identifier should be uniqe for a group; (the best for whole project)
+            </summary>
+        </member>
+        <member name="F:Uni.TouchBar.Item._groupName">
+            <summary>
+            The name of the group for which item belongs;
+            </summary>
+        </member>
+        <member name="P:Uni.TouchBar.Item.group">
+            <summary>
+            Gets the container of the item - !NULALBLE!.
+            </summary>
+            <value>The group.</value>
+        </member>
+        <member name="T:Uni.TouchBar.Item.Types">
+            <summary>
+            UniItem type.
+            </summary>
+        </member>
+        <member name="M:Uni.TouchBar.Item.Add(System.String)">
+            <summary>
+            You can add the item to the group.
+            </summary>
+            <param name="groupName">Group name.</param>
+        </member>
+        <member name="M:Uni.TouchBar.Item.Hide">
+            <summary>
+            Hides the item.
+            </summary>
+        </member>
+        <member name="M:Uni.TouchBar.Item.Show">
+            <summary>
+            Shows the item.
+            </summary>
+        </member>
+        <member name="T:Uni.TouchBar.Slider">
+            <summary>
+            NSSlider
+            </summary>
+        </member>
+        <member name="F:Uni.TouchBar.Slider.onUpdate">
+            <summary>
+            Called on the update of the slider.
+            </summary>
+        </member>
+        <member name="M:Uni.TouchBar.Slider.UpdateSlider(System.Single,System.Single,System.Single)">
+            <summary>
+            Updates the config of slider.
+            </summary>
+            <param name="min">Minimum.</param>
+            <param name="max">Max.</param>
+            <param name="value">Value.</param>
+        </member>
+        <member name="M:Uni.TouchBar.Slider.UpdateColor(UnityEngine.Color)">
+            <summary>
+            Updates the color.
+            </summary>
+            <param name="rgb">COLOR Rgb.</param>
+        </member>
+        <member name="M:Uni.TouchBar.Slider.#ctor(System.String,System.Double,System.Double,System.Double,System.Action{System.Double})">
+            <summary>
+            Initializes a new instance of the <see cref="!:Uni.TouchBar+Slider"/> class.
+            </summary>
+            <param name="identifier">Identifier.</param>
+            <param name="min">Minimum.</param>
+            <param name="max">Max.</param>
+            <param name="value">Value.</param>
+            <param name="onUpdate">On update.</param>
+        </member>
+        <member name="T:Uni.TouchBar.Label">
+            <summary>
+            NSLabel
+            </summary>
+        </member>
+        <member name="T:Uni.TouchBar.Button">
+            <summary>
+            Primary Button. (with texture and label)
+            </summary>
+        </member>
+        <member name="M:Uni.TouchBar.Button.Highlight(System.Boolean)">
+            <summary>
+            Update's body color for light.
+            </summary>
+        </member>
+        <member name="T:Uni.TouchBar.Segments">
+            <summary>
+            Segments are kind of "switch" buttons. 
+            </summary>
+        </member>
+        <member name="M:Uni.TouchBar.Segments.SetOptionWithText(System.Int32,System.String,System.Action,System.Int32)">
+            <summary>
+            Sets the option with text.
+            </summary>
+            <param name="index">Index.</param>
+            <param name="text">Text.</param>
+            <param name="onSelect">On select.</param>
+            <param name="optionWidth">Option width.</param>
+        </member>
+        <member name="M:Uni.TouchBar.Segments.SetOptionWithImage(System.Int32,System.String,System.Action,System.Int32)">
+            <summary>
+            Sets the option with image.
+            </summary>
+            <param name="index">Index.</param>
+            <param name="path">Path.</param>
+            <param name="onSelect">On select.</param>
+            <param name="optionalWidth">Optional width.</param>
+        </member>
+        <member name="T:Uni.TouchBar.Group">
+            <summary>
+            All Items are collected in the Group.
+            </summary>
+        </member>
+        <member name="E:Uni.TouchBar.Group.OnShow">
+            <summary>
+            Called when group is shown;b
+            </summary>
+        </member>
+        <member name="E:Uni.TouchBar.Group.OnHidden">
+            <summary>
+            Called when group was hidden;
+            </summary>
+        </member>
+        <member name="M:Uni.TouchBar.Group.ShowOnWindow(System.Int32)">
+            <summary>
+            Shows the group when window has focus.
+            </summary>
+            <param name="id">Identifier.</param>
+        </member>
+        <member name="M:Uni.TouchBar.Group.ShowOnWindow(Uni.TouchBar.Windows)">
+            <summary>
+            Shows the group when window has focus. Enum
+            </summary>
+            <param name="window">Enum Window.</param>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Uni.TouchBar.Group.ShowOnWindow(System.String)" -->
+        <member name="T:Uni.Settings">
+            <summary>
+            Plugin Settings window.
+            </summary>
+        </member>
+    </members>
+</doc>
