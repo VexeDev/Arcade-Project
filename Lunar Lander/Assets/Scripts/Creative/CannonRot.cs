@@ -25,7 +25,7 @@ public class CannonRot : MonoBehaviour
         }
 
         //check for action 1 button changes
-        if (Input.GetKeyDown(KeyCode.LeftControl) || Input.GetKeyDown(KeyCode.LeftCommand) || Input.GetKeyDown(KeyCode.Joystick1Button2))
+        if (Input.GetKeyDown(KeyCode.LeftControl) || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.LeftCommand) || Input.GetKeyDown(KeyCode.Joystick1Button2))
         {
             if (canShoot == true)
             {

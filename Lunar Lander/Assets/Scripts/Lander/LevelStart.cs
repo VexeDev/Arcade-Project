@@ -28,6 +28,7 @@ public class LevelStart : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         initialGravityScale = player.GetComponent<Rigidbody2D>().gravityScale;
         player.GetComponent<Rigidbody2D>().gravityScale = 0;
+        player.GetComponent<LanderMovement>().canMove = false;
         scene = GameObject.FindGameObjectWithTag("Scene");
         scene.GetComponent<SceneFollow>().enabled = false;
         cam = Camera.main;
@@ -65,6 +66,7 @@ public class LevelStart : MonoBehaviour
             {
                 cam.GetComponent<CamZooming>().enabled = true;
                 player.GetComponent<Rigidbody2D>().gravityScale = initialGravityScale;
+                player.GetComponent<LanderMovement>().canMove = true;
                 yield return null;
             }
             yield return null;

@@ -11,12 +11,12 @@ public class MainMenu : MonoBehaviour
     public TextMeshProUGUI highScoreText;
     public TextMeshProUGUI loadingText;
 
-    AudioSource audio;
+    AudioSource menuAudio;
 
     private void Start()
     {
         //audio
-        audio = this.GetComponent<AudioSource>();
+        menuAudio = this.GetComponent<AudioSource>();
         //score
         highScoreText.text = "High Score: " + PlayerPrefs.GetInt("highScore").ToString();
 
@@ -44,7 +44,7 @@ public class MainMenu : MonoBehaviour
         if(Input.GetKey(KeyCode.Alpha1))
         {
             //sound
-            audio.Play();
+            menuAudio.Play();
             //wait then play
             StartCoroutine(PlayDelay());
         }
@@ -52,7 +52,7 @@ public class MainMenu : MonoBehaviour
         if(Input.GetKey(KeyCode.Escape))
         {
             //sound
-            audio.Play();
+            menuAudio.Play();
             //wait then quit
             StartCoroutine(QuitDelay());
         }

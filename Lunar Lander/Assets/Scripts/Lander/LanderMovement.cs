@@ -45,7 +45,7 @@ public class LanderMovement : MonoBehaviour
             }
 
             //check for action 1 button changes
-            if (Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.LeftCommand) || Input.GetKey(KeyCode.Joystick1Button2))
+            if (Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.LeftCommand) || Input.GetKey(KeyCode.Joystick1Button2))
             {
                 //apply thrust using addForce
                 rb.AddForce(transform.up * thrust);
@@ -138,21 +138,23 @@ public class LanderMovement : MonoBehaviour
     {
         //play sound
         audio1.Play();
-        audio3.Play();
         //respawn explosion
-        yield return new WaitForSeconds(1);
+        
         this.GetComponent<SpriteRenderer>().sprite = null;
-        Instantiate(explosionObj, this.gameObject.transform);
+        GameObject z = Instantiate(explosionObj, this.gameObject.transform);
+        z.transform.localScale = new Vector2(5, 5);
         //cam prep
         Camera.main.GetComponent<CamZooming>().snap = false;
         Camera.main.GetComponent<CamZooming>().canZoom = false;
         //move cam
         StartCoroutine(CamMove(4));
+        //play fail sound
         //zoom cam
         StartCoroutine(Camera.main.gameObject.GetComponent<CamZooming>().resizeRoutine(Camera.main.orthographicSize, 2, 4));
         yield return new WaitForSeconds(1);
         //end
-        yield return new WaitForSeconds(3);
+        audio3.Play();
+        yield return new WaitForSeconds(2);
         if (PlayerPrefs.GetInt("lives") < 1)
         {
             SceneManager.LoadScene("Bonus");

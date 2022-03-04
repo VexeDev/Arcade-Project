@@ -621,7 +621,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64e40936eaa574d9d856daaf62c550c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 75
+  speed: 110
   laserInstantiation: {fileID: 3754485174456290745, guid: 92531b261d0c94cbda28b06b24e88185,
     type: 3}
   audio1: {fileID: 661267657}
