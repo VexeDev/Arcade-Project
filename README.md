@@ -1,6 +1,6 @@
 # Arcade-Project
 ## **Purpose:**
-This project was meant to be inspired by the classic arcade game Lunar Lander. This project features working menus, gameplay, and scoring. The player has three lives and then can access a bonus level. 
+This project was made collaboratively for a class project in January/February of 2021. It was meant to be inspired by the classic arcade game Lunar Lander. This project features working menus, gameplay, and scoring. The player has three lives and then can access a bonus level.
 
 ## **Controls:**
 - Rotate: Arrow Keys
